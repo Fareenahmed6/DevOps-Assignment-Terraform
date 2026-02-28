@@ -30,3 +30,31 @@ aws dynamodb create-table \\
   --billing-mode PAY_PER_REQUEST \\
   
   --region ap-south-1
+
+
+
+
+
+
+
+
+  ingress {
+    from_port   = 8000
+    to_port     = 8000
+    protocol    = "tcp"
+    cidr_blocks = ["49.204.123.10/32"]
+  }
+
+  ingress {
+    from_port   = 3000
+    to_port     = 3000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+ingress {
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["49.204.123.10/32"]
+  }

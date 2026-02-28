@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "devops-task-2026"
+    bucket         = "my-terraform-state-fareen-12345"
     key            = "dev/terraform.tfstate"
     region         = "ap-south-1"
     dynamodb_table = "terraform-lock-table"
